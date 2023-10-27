@@ -5,17 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         body {
             display: grid;
             place-content: center;
+            background-color: rgb(248, 234, 161);
         }
+
+        *{
+            --primary-yellow: #ffd000;
+            --secondary-yellow: #f6db63;
+            --primary-lack: #212121;
+            margin: 0;
+        }
+
         textarea {
             border-radius: 9px;
             border-color: var(--primary-lack);
             border-width: medium;
             background-color: var(--secondary-yellow);
             outline: none;
-            height: 10rem;
+            height: 5rem;
         }
 
         textarea::placeholder {
@@ -28,13 +38,7 @@
             border-width: medium;
             background-color: var(--secondary-yellow);
             outline: none;
-            height: 10rem;
-        }
-        *{
-            --primary-yellow: #ffd000;
-            --secondary-yellow: #f6db63;
-            --primary-lack: #212121;
-            margin: 0;
+            height: 5rem;
         }
 
         button{
@@ -45,14 +49,25 @@
             background-color: transparent;
             color: var(--primary-lack);
             border-radius: 7px;
-            border-color: var(--primary-yellow);
+            border-color: var(--primary-lack);
             margin: auto;
             margin-top: 10px;
             outline: none;
         }
+
         button:hover{
             background-color: var(--primary-lack);
             color: var(--primary-yellow);
+            border-color: rgb(248, 234, 161);
+        }
+
+        @media (max-width:660px){
+             h1 {
+                font-size: 1.5em;
+            }
+            .text {
+                width: 85vw;
+            }
         }
     </style>
 </head>
@@ -60,12 +75,14 @@
 <body>
     <h1 style="text-align: center;padding: 10px 0; color: var(--primary-blue);">English to Banana Translator</h1>
     
-    <textarea name="" id="txt-input" cols="30" rows="10" placeholder="Put your text in english here and we will convert it to banana"></textarea>
+    <textarea class="text" name="" id="txt-input" cols="30" rows="10" placeholder="Put your text in english here and we will convert it to banana"></textarea>
     <button id="btn-translate">Translate</button>
 
     <div style="padding: 1px;font-family: bold; font-size: x-large; text-align: center;">Outut will apper here 👇</div>
 
-    <div id="output"></div>
+    <textarea class="text" id="output" cols="30" rows="10"></textarea>
+
+
 
     <script src="app.js" type="text/javascript"></script>
 </body>
