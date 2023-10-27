@@ -5,33 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            display: grid;
+            place-content: center;
+        }
         textarea {
-            width: 90%;
-            height: 10vh;
-            display: block;
-            margin: 1rem;
-            padding: 1rem;
-            background-color: black;
-            color: rgb(255, 187, 0);
-            font-size: large;
+            border-radius: 9px;
+            border-color: var(--primary-lack);
+            border-width: medium;
+            background-color: var(--secondary-yellow);
+            outline: none;
+            height: 10rem;
+        }
+
+        textarea::placeholder {
+            font-weight: lighter;
         }
 
         #output {
-            border: 1px solid black;
-            height: 10vh;
-            width: 80%;
-            margin: 1rem;
-            padding: 1rem;
-            background-color: rgb(255, 187, 0);
-            color: black;
-            font-size: large;
+            border-radius: 9px;
+            border-color: var(--primary-lack);
+            border-width: medium;
+            background-color: var(--secondary-yellow);
+            outline: none;
+            height: 10rem;
+        }
+        *{
+            --primary-yellow: #ffd000;
+            --secondary-yellow: #f6db63;
+            --primary-lack: #212121;
+            margin: 0;
+        }
+
+        button{
+            padding: 1rem 2rem;
+            width: max-content;
+            font-weight: 700;
+            font-size: small;
+            background-color: transparent;
+            color: var(--primary-lack);
+            border-radius: 7px;
+            border-color: var(--primary-yellow);
+            margin: auto;
+            margin-top: 10px;
+            outline: none;
+        }
+        button:hover{
+            background-color: var(--primary-lack);
+            color: var(--primary-yellow);
         }
     </style>
 </head>
+
 <body>
-    <h1 style="text-align: center; color: rgb(255, 187, 0);">English to Banana Translator</h1>
+    <h1 style="text-align: center;padding: 10px 0; color: var(--primary-blue);">English to Banana Translator</h1>
+    
     <textarea name="" id="txt-input" cols="30" rows="10" placeholder="Put your text in english here and we will convert it to banana"></textarea>
-    <button id="btn-translate" style="align-items: center;">Translate</button>
+    <button id="btn-translate">Translate</button>
 
     <div style="padding: 1px;font-family: bold; font-size: x-large; text-align: center;">Outut will apper here 👇</div>
 
